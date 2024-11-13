@@ -40,7 +40,7 @@ export default function SignIn({store}) {
       password: data.get('password'),
     });
 
-    axios.post("http://localhost:8080/login",{
+    axios.post("https://jfsd-spring-hosting-production-b726.up.railway.app/login",{
       email: data.get('email'),
       password: data.get('password')
     }).then((res)=>{
