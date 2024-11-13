@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Show(){
 
     function Deletefun (email) {
-        axios.delete("http://localhost:8080/delete", {params:{
+        axios.delete("jfsd-spring-hosting-production-9553.up.railway.app/delete", {params:{
             email: email
         }}).then((res)=>{
             alert(res.data);
@@ -22,7 +22,7 @@ export default function Show(){
     }
 
     function saveEdit() {
-        axios.put("http://localhost:8080/update", {
+        axios.put("jfsd-spring-hosting-production-9553.up.railway.app/update", {
             name: document.getElementsByName("e_name")[0].value,
             role: document.getElementsByName("e_role")[0].value,
             email: document.getElementsByName("e_email")[0].value,
@@ -36,7 +36,7 @@ export default function Show(){
     const [result, setResult] = useState(null)
     
     if(result == null) {
-        axios.get("http://localhost:8080/all", {}).then ((res)=>{
+        axios.get("jfsd-spring-hosting-production-9553.up.railway.app/all", {}).then ((res)=>{
             setResult(res.data)
         })
     }
